@@ -58,9 +58,7 @@ exports.updateEmployee = (req, res) => {
   if (req.body.constructor === Object && Object.keys(req.body).length === 0) {
     res.status(400).send({ success: false, message: "Please fill all fields" });
   } else {
-    EmployeeModel.updateEmployee(
-      req.params.id,
-      employeeReqData,
+    EmployeeModel.updateEmployee(req.params.id,employeeReqData,
       (err, employee) => {
         if (err) res.send(err);
         res.json({

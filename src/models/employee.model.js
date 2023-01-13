@@ -43,6 +43,7 @@ Employee.getEmployeeByIDSingle = (id, result) => {
 
 //create new employee
 Employee.createEmployee = (employeeReqData, result) => {
+  // return(    console.log("bank response :- ",employeeReqData))
   let newObjectData = [
     employeeReqData.first_name,
     employeeReqData.last_name,
